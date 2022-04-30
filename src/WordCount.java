@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Vector;
 
 public class WordCount {
+
     public static void main(String args[]){
         Scanner obj = new Scanner(System.in);
         //ArrayList<String> userInput = new ArrayList<String>();
