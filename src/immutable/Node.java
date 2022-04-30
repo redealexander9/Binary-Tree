@@ -36,7 +36,7 @@ public int size(){
 }
 
 public int depth(){
-    return 1 + left.depth() + right.depth();
+    return 1 + Math.max(left.depth(), right.depth());
 }
 
 public boolean empty(){

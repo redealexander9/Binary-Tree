@@ -6,31 +6,43 @@ import java.util.Vector;
 public class WordCount {
 
     public static void main(String args[]){
+        Map m = Map.create();
+
+
+
+
+
+
+        //System.out.println(m.getValue("Mango"));
         Scanner obj = new Scanner(System.in);
         //ArrayList<String> userInput = new ArrayList<String>();
-        Vector<String> inputs = new Vector<String>();
-        Vector<String> words = new Vector<String>();
+        //Vector<String> words = new Vector<String>();
         String temp = obj.nextLine();
-        int space;
+        int i = 0;
 
-        int quit = temp.indexOf("quit");
-        while(quit != 0){
-            inputs.add(temp);
-            temp = obj.nextLine();
-            quit = temp.indexOf("quit");
-        }
-        for(int i = 0; i < inputs.size(); i++){
-            temp = inputs.elementAt(i);
-            space = temp.indexOf(' ');
-            while(space != -1){
-                words.add(temp.substring(0, space));
-                System.out.println("SubString: " + temp.substring(space, temp.indexOf(' ', space)));
-                temp = temp.substring(space, temp.indexOf(' ', space));
-                space = temp.indexOf(' ');
+        while(temp.indexOf("quit") != 0){
+
+
+
+
+            String tempArray[] = temp.split(" ");
+            for(String word : tempArray){
+                if(m.getValue(word) != null){
+                    m.setValue(word, m.getValue(word) + 1);
+                }
+                else{
+                    m.setValue(word, i);
+                    i++;
+                }
+
             }
 
+            temp = obj.nextLine();
+
+
+
         }
-        System.out.println(words);
+
     }
 
 }

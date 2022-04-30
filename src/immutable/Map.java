@@ -3,10 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Map  {
-    public static void main(String[] args) {
 
-
-    }
     ArrayList<String> List = new ArrayList<String>();
     public interface Entry{
         String getKey();
