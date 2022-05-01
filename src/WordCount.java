@@ -12,20 +12,35 @@ public class WordCount {
         //Vector randoms = new Vector();
         Vector words = new Vector();
         Vector occurs = new Vector();
-        //Vector temps = new Vector();
+        Vector temps = new Vector();
         Scanner obj = new Scanner(System.in);
         String temp = obj.nextLine();
+
         String[] arr = temp.split(" ");
-        int i = 0;
+        for(String a : arr){
+            temps.add(a);
+            System.out.println(a);
+        }
+        int quit = 0;
         //System.out.println(temp.indexOf("quit") == -1);
-        while(temp.indexOf("quit") == -1){
-            arr = temp.split(" ");
-            System.out.println(arr);
+        System.out.println(!temp.contains("contains"));
+        while((!temp.contains("quit")) && (temp != null)){
             temp = obj.nextLine();
+            System.out.println(temp);
+            arr = temp.split(" ");
+            for(String array : arr){
+                temps.add(array);
+                System.out.println(array);
+
+            }
+            System.out.println(temp.contains("quit"));
+
+
         }
 
-        for(String word : arr){
-            System.out.println(word);
+        for(Object w : temps){
+            System.out.println
+            System.out.println((String)w);
         }
 
 
